@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090909">
+
+    <meta name="description" content="Ujian Refleksi Microsoft Word dan Excel Kelas XI RPL">
+
+    <title>SOAL PILIHAN GANDA KELAS XI RPL</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="brand">
+        <div class="brand-icon">XI</div>
+        <div>
+            <h2>RPL<span>.</span>EXAM</h2>
+            <small>MICROSOFT OFFICE ASSESSMENT</small>
+        </div>
+    </div>
+
+    <div class="header-label">KELAS XI RPL</div>
+</header>
+
+<main class="container">
+
+    <!-- ================= HALAMAN UTAMA ================= -->
+
+    <section id="welcome" class="panel welcome">
+
+        <div class="badge">
+            EVALUASI PEMBELAJARAN KELAS XI RPL
+        </div>
+
+        <h1>
+            SOAL PILIHAN GANDA
+            <span>KELAS XI RPL</span>
+        </h1>
+
+        <h2 class="main-subtitle">
+            REFLEKSI MS.WORD & MS.EXCEL
+        </h2>
+
+        <p class="teacher-name">
+            Guru Produktif : Hoelwiel Febtha B.L, S.Kom
+        </p>
+
+        <p class="subtitle">
+            Uji pemahaman, analisis, evaluasi, dan kemampuan
+            memecahkan masalah melalui soal-soal HOTS.
+        </p>
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+                <div class="subject-icon word">W</div>
+
+                <div>
+                    <h3>MICROSOFT WORD</h3>
+                    <p>15 Soal Pilihan Ganda</p>
+                    <small>Pengolahan Dokumen</small>
+                </div>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-icon excel">X</div>
+
+                <div>
+                    <h3>MICROSOFT EXCEL</h3>
+                    <p>15 Soal Pilihan Ganda</p>
+                    <small>Pengolahan Data & Formula</small>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <strong>30</strong>
+                <span>Total Soal</span>
+            </div>
+
+            <div class="info-card">
+                <strong>60</strong>
+                <span>Menit</span>
+            </div>
+
+            <div class="info-card">
+                <strong>100</strong>
+                <span>Nilai Maksimal</span>
+            </div>
+
+        </div>
+
+        <div class="identity-box">
+
+            <h2>IDENTITAS PESERTA</h2>
+
+            <p>Silakan isi identitas sebelum memulai ujian.</p>
+
+            <form id="identityForm">
+
+                <label for="studentName">
+                    Nama Lengkap
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Masukkan nama lengkap"
+                    maxlength="60"
+                    required
+                >
+
+                <label for="studentClass">
+                    Kelas
+                </label>
+
+                <input
+                    type="text"
+                    id="studentClass"
+                    value="XI RPL"
+                    required
+                >
+
+                <label for="studentNumber">
+                    Nomor Absen
+                </label>
+
+                <input
+                    type="number"
+                    id="studentNumber"
+                    placeholder="Masukkan nomor absen"
+                    min="1"
+                    required
+                >
+
+                <div class="exam-rules">
+                    <h3>PETUNJUK PENGERJAAN</h3>
+
+                    <ul>
+                        <li>Kerjakan seluruh 30 soal.</li>
+                        <li>Pilih satu jawaban paling tepat.</li>
+                        <li>Waktu pengerjaan adalah 60 menit.</li>
+                        <li>Jawaban dapat diubah sebelum ujian selesai.</li>
+                        <li>Pembahasan muncul setelah ujian berakhir.</li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary btn-wide" type="submit">
+                    MULAI REFLEKSI
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HALAMAN UJIAN ================= -->
+
+    <section id="exam" class="panel exam hidden">
+
+        <div class="exam-header">
+
+            <div>
+                <div class="badge">UJIAN SEDANG BERLANGSUNG</div>
+
+                <h2 id="sectionTitle">
+                    MICROSOFT WORD
+                </h2>
+
+                <p id="studentInfo"></p>
+            </div>
+
+            <div class="timer-box">
+                <small>WAKTU TERSISA</small>
+                <strong id="timer">60:00</strong>
+            </div>
+
+        </div>
+
+        <div class="progress-info">
+            <span id="progressText">SOAL 1 DARI 30</span>
+            <span id="answeredText">0/30 TERJAWAB</span>
+        </div>
+
+        <div class="progress-track">
+            <div id="progressBar"></div>
+        </div>
+
+        <div class="exam-layout">
+
+            <aside class="question-sidebar">
+
+                <h3>NAVIGASI SOAL</h3>
+
+                <div id="numberGrid" class="number-grid"></div>
+
+                <div class="legend">
+                    <span><i class="done-dot"></i> Terjawab</span>
+                    <span><i class="empty-dot"></i> Belum</span>
+                    <span><i class="active-dot"></i> Aktif</span>
+                </div>
+
+            </aside>
+
+            <article class="question-area">
+
+                <div class="question-meta">
+
+                    <span id="sectionPill" class="section-pill">
+                        MICROSOFT WORD
+                    </span>
+
+                    <span class="hots-label">
+                        STUDI KASUS • HOTS
+                    </span>
+
+                </div>
+
+                <div class="question-number">
+                    PERTANYAAN <span id="questionNumber">01</span>
+                </div>
+
+                <h3 id="questionText"></h3>
+
+                <div id="options" class="options"></div>
+
+                <div class="question-navigation">
+
+                    <button
+                        id="prevBtn"
+                        class="btn btn-secondary"
+                        type="button">
+                        ← SEBELUMNYA
+                    </button>
+
+                    <button
+                        id="nextBtn"
+                        class="btn btn-primary"
+                        type="button">
+                        SELANJUTNYA →
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="finish-area">
+
+            <p>
+                Pastikan semua jawaban telah diperiksa
+                sebelum menyelesaikan ujian.
+            </p>
+
+            <button id="finishBtn" class="btn btn-outline">
+                SELESAIKAN UJIAN
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HALAMAN HASIL ================= -->
+
+    <section id="result" class="panel result hidden">
+
+        <div class="result-heading">
+
+            <div class="badge">UJIAN SELESAI</div>
+
+            <h1>
+                HASIL <span>REFLEKSI</span>
+            </h1>
+
+            <p id="resultGreeting"></p>
+
+            <p class="teacher-name">
+                Guru Produktif : Hoelwiel Febtha B.L, S.Kom
+            </p>
+
+        </div>
+
+        <div class="score-card">
+
+            <small>NILAI AKHIR</small>
+
+            <h2 id="score">0</h2>
+
+            <div id="category" class="category">
+                KEEP LEARNING
+            </div>
+
+        </div>
+
+        <div class="statistics">
+
+            <div>
+                <strong id="correctCount">0</strong>
+                <span>JAWABAN BENAR</span>
+            </div>
+
+            <div>
+                <strong id="wrongCount">0</strong>
+                <span>JAWABAN SALAH</span>
+            </div>
+
+            <div>
+                <strong id="blankCount">0</strong>
+                <span>TIDAK DIJAWAB</span>
+            </div>
+
+        </div>
+
+        <div class="result-actions">
+
+            <button id="reviewBtn" class="btn btn-primary">
+                LIHAT PEMBAHASAN
+            </button>
+
+            <button id="printBtn" class="btn btn-secondary">
+                CETAK HASIL / PDF
+            </button>
+
+        </div>
+
+        <div id="review" class="review hidden">
+
+            <h2>PEMBAHASAN SOAL</h2>
+
+            <div id="reviewList"></div>
+
+        </div>
+
+        <div class="reflection-box">
+
+            <h2>REFLEKSI DIRI SISWA</h2>
+
+            <p>
+                Jawablah pertanyaan berikut sebagai evaluasi
+                pembelajaran Microsoft Word dan Excel.
+            </p>
+
+            <label>
+                1. Materi apa yang paling sulit kamu pahami?
+            </label>
+
+            <textarea
+                id="reflection1"
+                placeholder="Tuliskan refleksimu..."
+            ></textarea>
+
+            <label>
+                2. Kesalahan apa yang sering kamu lakukan?
+            </label>
+
+            <textarea
+                id="reflection2"
+                placeholder="Tuliskan refleksimu..."
+            ></textarea>
+
+            <label>
+                3. Apa rencanamu untuk meningkatkan kemampuan?
+            </label>
+
+            <textarea
+                id="reflection3"
+                placeholder="Tuliskan rencanamu..."
+            ></textarea>
+
+        </div>
+
+        <button id="homeBtn" class="btn btn-outline btn-wide">
+            KEMBALI KE BERANDA
+        </button>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <strong>SOAL PILIHAN GANDA KELAS XI RPL</strong>
+
+    <p>REFLEKSI MS.WORD & MS.EXCEL</p>
+
+    <p>Guru Produktif : Hoelwiel Febtha B.L, S.Kom</p>
+
+</footer>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
